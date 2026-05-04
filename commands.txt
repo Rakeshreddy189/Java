@@ -1,0 +1,83 @@
+📁 1. Setup & Config
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+
+Check config:
+
+git config --list
+📂 2. Initialize & Clone
+git init                      # Create new repo
+git clone <repo-url>          # Clone existing repo
+🔍 3. Check Status
+git status                    # See changes
+git log                       # Commit history
+git log --oneline             # Short history
+➕ 4. Add & Commit
+git add .                     # Add all files
+git add file.txt              # Add specific file
+
+git commit -m "message"       # Commit changes
+🌐 5. Remote Repository
+git remote -v                         # Check remote
+git remote add origin <repo-url>     # Add remote
+git remote remove origin             # Remove remote
+🚀 6. Push & Pull
+git push origin main                 # Push code
+git push -u origin main             # First push
+
+git pull origin main                # Pull latest changes
+git fetch                           # Fetch without merging
+🌿 7. Branching (VERY IMPORTANT)
+git branch                          # List branches
+git branch new-branch               # Create branch
+git checkout new-branch             # Switch branch
+
+git checkout -b new-branch          # Create + switch
+
+git merge branch-name               # Merge branch
+git branch -d branch-name           # Delete branch
+🔄 8. Undo Changes
+git restore file.txt                # Undo file changes
+git restore --staged file.txt       # Unstage file
+
+git reset --soft HEAD~1             # Undo commit (keep changes)
+git reset --hard HEAD~1             # Undo commit (delete changes)
+⚠️ 9. Fix Mistakes
+git commit --amend                  # Modify last commit
+📌 10. Stash (Save Temporary Work)
+git stash                           # Save changes
+git stash pop                       # Restore changes
+🔍 11. View Differences
+git diff                            # See changes
+git diff --staged                   # See staged changes
+🧹 12. Clean Repo
+git clean -fd                       # Remove untracked files
+🔐 13. Authentication (Important)
+
+If GitHub asks for password:
+👉 Use Personal Access Token (PAT) instead
+
+🎯 Most Important Commands (Remember These)
+
+If interview comes, just know:
+
+git clone
+git add .
+git commit -m ""
+git push
+git pull
+git branch
+git checkout -b
+git merge
+git status
+💡 Real Workflow Example
+git clone <repo>
+cd project
+
+git checkout -b feature-branch
+git add .
+git commit -m "Added test cases"
+git push origin feature-branch
+
+git pull origin main
+git merge main
